@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: #cdcdcd;
+            padding: 16px;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        .input-area {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #tarefaInput {
+            padding: 8px;
+            width: 200px;
+            border-radius: 8px;
+        }
+
+        #btnAdicionar {
+            padding: 8px 12px;
+            margin-left: 5px;
+            color: darkgray;
+            background-color: whitesmoke;
+            border: #16c416 0px solid;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        #btnAdicionar:hover {
+            color: rgb(213, 211, 211);
+            background-color: rgb(101, 21, 21);
+            transition: 0.5s;
+        }
+
+        ul {
+            padding: 0px;
+        }
+
+        li {
+            background: #fff;
+            margin: 16px 16px;
+            padding: 10px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tarefas</h1>
+    <div class="input-area">
+        <input type="text" id="tarefaInput" placeholder="Digite sua Tarefa!">
+        <button id="btnAdicionar">+</button>
+    </div>
+
+
+    <ul id="listaTarefas">
+        <li>Estudar</li>
+    </ul>
+</body>
+
+</html>

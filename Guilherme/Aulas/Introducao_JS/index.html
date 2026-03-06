@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Show/Hide Imagem</title>
+    <style>
+        #floresta {
+            display: none;
+            /* começa escondida */
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="botaoShow">Show</button>
+    <br><br>
+    <img id="floresta" src="forest-full.webp" alt="Floresta serena">
+
+    <script>
+        const botao = document.getElementById("botaoShow");
+        const imagem = document.getElementById("floresta");
+
+        botao.addEventListener("click", () => {
+            if (imagem.style.display === "none") {
+                imagem.style.display = "block";
+                botao.textContent = "Hide"; // muda texto do botão
+            } else {
+                imagem.style.display = "none";
+                botao.textContent = "Show"; // volta texto do botão
+            }
+        });
+    </script>
+</body>
+
+</html>
