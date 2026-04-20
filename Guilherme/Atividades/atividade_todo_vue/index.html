@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do com Vue 3</title>
+
+  <!-- Vue 3 -->
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app" class="container">
+    <h1>📝 Lista de Tarefas</h1>
+
+    <!-- Adicionar tarefa -->
+    <div class="input-group">
+      <input 
+        v-model="novaTarefa" 
+        placeholder="Digite uma nova tarefa"
+        @keyup.enter="adicionarTarefa"
+      >
+      <button @click="adicionarTarefa">Adicionar</button>
+    </div>
+
+    <!-- Lista -->
+    <ul>
+      <li v-for="tarefa in tarefas" :key="tarefa.id">
+
+        <span 
+          :class="{ concluida: tarefa.concluida }"
+          @click="toggleConcluida(tarefa.id)"
+        >
+          {{ tarefa.texto }}
+        </span>
+
+        <button @click="removerTarefa(tarefa.id)">
+          ❌
+        </button>
+
+      </li>
+    </ul>
+
+    <!-- Mensagem quando vazio -->
+    <p v-if="tarefas.length === 0">
+      Nenhuma tarefa adicionada.
+    </p>
+
+  </div>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
+</body>
+</html>
