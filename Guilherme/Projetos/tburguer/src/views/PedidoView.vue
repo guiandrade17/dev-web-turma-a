@@ -1,11 +1,17 @@
 <template>
-    <div>
-        <h1>Pedidos</h1>
-    </div>
+  <div>
+    <h1>Pedidos</h1>
+    <lista-pedido-component-vue />
+  </div>
 </template>
 <script>
-    export default {
-        name: 'PedidosView',
-    };
+import ListaPedidoComponentVue from "@/components/ListaPedidoComponent.vue";
+
+export default {
+  name: "PedidosView",
+  components: {
+    ListaPedidoComponentVue,
+  },
+};
 </script>
 <style scoped></style>

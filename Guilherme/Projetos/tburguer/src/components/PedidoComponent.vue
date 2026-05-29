@@ -31,7 +31,7 @@
           <option
             v-for="pontoCarne in listaPontoCarne"
             :key="pontoCarne.id"
-            value="pontoCarne"
+            :value="pontoCarne"
           >
             {{ pontoCarne.descricao }}
           </option>
